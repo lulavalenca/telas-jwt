@@ -1,19 +1,33 @@
 [project]
 name = "telas-login"
 version = "0.1.0"
-description = ""
+description = "Projeto para login usando JWT."
 authors = [
-    {name = "lulavalenca",email = "lulavalencafilho@gmail.com"}
+    {name = "lulavalenca", email = "lulavalencafilho@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.13.5,<4.0"  # Faixa de versão do Python mais comum e compatível com as dependências
 dependencies = [
+    # Adicione as dependências do projeto aqui, por exemplo:
+    # "requests = '^2.25.1'"
 ]
 
 [tool.poetry]
 packages = [{include = "telas_login", from = "src"}]
 
+# Dependências de desenvolvimento
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+pytest-cov = "^6.2.1"
+blue = "^0.9.1"
+isort = "^6.0.1"
+taskipy = "^1.14.1"  # Adicionando o taskipy à seção de dev
 
+# Configurações de build
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+# Ferramentas adicionais (caso queira adicionar plugins ou outras configurações)
+# [tool.poetry.plugins]
+# algum_plugin = "plugin_path"
